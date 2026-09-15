@@ -1,0 +1,332 @@
+/*===================================================================
+PROYECTO PERFIL PROFESIONAL
+NOMBRE: KELLY ALVIS
+102M FRONT-END
+===================================================================*/
+
+/* --- CONFIGURACIÓN GENERAL --- SE USA SELECTOR UNIVERSAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../img/street12.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #334155;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1100px;  /* controla anchura la pagina*/
+    margin: 0 auto;     /* Centra todo el bloque en la pantalla */
+    padding: 0 20px;    /* para que no pegue a los bordes */
+    background-color: #fff; /* fondo blanco para el bloque central */
+    box-shadow: 0 0 20px rgba(0,0,0,0.02); /* aplicacion de sombra a los lados */
+}
+/* Títulos h2 generales de cada seccion sección */
+main h2 {
+    font-size: 35;
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* --- HEADER Y REDES SOCIALES --- */
+header {
+    background-color: #191f2b;
+    color: #fff;
+    padding: 25px 20px;
+    text-align: center;
+    
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a{
+    text-decoration: none;
+    padding: 0 20px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(245, 245, 249);
+    transition: color 0.3s ease; /* Transición suave en vez de cambio de tamaño brusco */
+}
+/*-- HEADER-------*/
+.nav a:hover{
+    color: rgb(177, 146, 184);
+}
+
+.redes-sociales {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.redes-sociales a {
+    color: #fff;
+    font-size: 22px;
+    margin: 0 12px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.redes-sociales a:hover {
+    color: #4a8199; /* Celeste tecnológico */
+    transform: translateY(-3px);
+}
+
+header h1 {
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+/* --- END HEADER---------- */
+/* --------------------------- */
+
+/* --- SECCIÓN 1: BANNER DE PRESENTACIÓN --- */
+.section1-presentacion {
+    background: linear-gradient(135deg, #1e293b, #38bdf8);
+    color: #fff;
+    padding: 70px 20px;
+}
+
+.container-banner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.containt-img img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.text-tarjeta h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: #f1f5f9;
+    letter-spacing: 0.5px;
+}
+
+.text-tarjeta p {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.95;
+}
+/* --- END SECCIÓN 1---------- */
+/* --------------------------- */
+
+/* --- SECCIÓN 2: FORMACIÓN ACADÉMICA --- */
+.section2-formacademic {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.formacionacademica {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.tarjeta-formacademic {
+    background-color: #ebeef0af;
+    flex: 1;    /*aplicado para que todos tengan el mismo espacio*/
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-formacademic:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-formacademic h3 {
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+/* --- END SECCIÓN 2---------- */
+/* --------------------------- */
+
+/* --- SECCIÓN 3: EXPERIENCIA LABORAL Y PROYECTOS --- */
+.section3-experience {
+    background-color: #fff;
+    padding: 80px 20px;
+}
+
+.content-experience {
+    max-width: 1000px;
+    margin: 0 auto 50px auto; /* Separación entre filas */
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.content-experience:last-of-type {
+    margin-bottom: 0;  /* Estilo para que la última fila no tenga margen sobrante abajo */
+}
+
+/* Se aplicó  un REQUERIMIENTO ADICIONAL  alternar el orden de las imagenes en las filas (imágenes izquierda / derecha) */
+.content-experience:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.experiencia {
+    flex: 1;
+}
+
+.experiencia img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.texts {
+    flex: 1;
+}
+
+.texts h3 {
+    font-size: 25px;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.texts a {
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #1e293b;
+}
+/* --- END SECCIÓN 3---------- */
+/* --------------------------- */
+
+/* --- SECCIÓN 4: HABILIDADES (aplicacion de cuadrícula Grid) --- */
+.section4-habbility {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lista-imagenes {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.lista-imagenes li {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+.lista-imagenes img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.lista-imagenes .contenido {
+    padding: 20px;
+}
+/* --- SECCIÓN 4-------------- */
+/* --------------------------- */
+
+/* --- SECCIÓN 5: CONTACTO --- */
+.section5-contacto {
+    background-color: #f1f5f9;
+    padding: 60px 20px;
+}
+
+.content-product {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.content-product > img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.section5-contacto .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section5-contacto .texts h3 {
+    font-size: 24px;
+    color: #0f172a;
+}
+
+.redessociales {
+    display: flex;   /* --- Alineación de iconos en línea --- */
+    gap: 15px; /* Espacio entre los iconos */
+}
+
+.redessociales img {
+    height: 30px; /* Tamaño igual para los tres iconos */
+    width: auto;
+    object-fit: contain;
+}
+
+/* --- BOTÓN FINAL --- */
+.section5-contacto .texts > a {
+    display: inline-block;
+    width: max-content; /* para que tenga el mismo tamaño del texto */
+    padding: 10px 20px;
+    background-color: #0f172a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* --- END SECCIÓN 5---------- */
+/* --------------------------- */
+
+/* --- FOOTER --- */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+/* --- END FOOTER --- */
